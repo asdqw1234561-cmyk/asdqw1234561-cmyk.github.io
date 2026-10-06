@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>황승구 | Backend Developer</title>
+<meta name="description" content="실시간 데이터를 안전하게 처리하는 백엔드 개발자 황승구의 이력서">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --paper: #ffffff;
+    --ink: #16191f;
+    --ink-2: #4a5160;
+    --ink-3: #8a91a0;
+    --line: #e4e7ec;
+    --accent: #1f5eff;
+    --accent-soft: #eaf0ff;
+    --warn-soft: #fff4e5;
+    --warn-ink: #9a5b00;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1115;
+      --paper: #161a21;
+      --ink: #e8ebf0;
+      --ink-2: #b3b9c5;
+      --ink-3: #7c8494;
+      --line: #262c36;
+      --accent: #6f9bff;
+      --accent-soft: #1b2540;
+      --warn-soft: #2e2414;
+      --warn-ink: #f0b860;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+    font-size: 15px;
+    line-height: 1.65;
+    word-break: keep-all;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .page {
+    max-width: 880px;
+    margin: 40px auto;
+    padding: 56px 64px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+  }
+  /* Header */
+  header { border-bottom: 2px solid var(--ink); padding-bottom: 28px; margin-bottom: 36px; }
+  .role { color: var(--accent); font-weight: 700; font-size: 14px; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 6px; }
+  h1 { font-size: 40px; line-height: 1.2; margin: 0 0 14px; letter-spacing: -0.02em; }
+  .tagline { font-size: 18px; color: var(--ink-2); margin: 0 0 20px; }
+  .contact { display: flex; flex-wrap: wrap; gap: 8px 20px; padding: 0; margin: 0; list-style: none; font-size: 14px; color: var(--ink-2); }
+  .contact b { color: var(--ink-3); font-weight: 500; margin-right: 6px; }
+
+  section { margin-bottom: 44px; }
+  h2 {
+    font-size: 13px; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--ink-3); margin: 0 0 18px; padding-bottom: 8px; border-bottom: 1px solid var(--line);
+  }
+  ul.points { margin: 0; padding-left: 18px; }
+  ul.points li { margin-bottom: 6px; }
+  ul.points li::marker { color: var(--accent); }
+
+  /* Skills */
+  .skills { display: grid; grid-template-columns: 130px 1fr; gap: 10px 20px; margin: 0; }
+  .skills dt { font-weight: 700; color: var(--ink-2); font-size: 14px; padding-top: 3px; }
+  .skills dd { margin: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip { display: inline-block; font-size: 13px; padding: 2px 10px; border-radius: 999px; background: var(--bg); border: 1px solid var(--line); color: var(--ink-2); }
+  .chip.main { background: var(--accent-soft); border-color: transparent; color: var(--accent); font-weight: 600; }
+
+  /* Projects */
+  .project { padding: 26px 0; border-top: 1px dashed var(--line); }
+  .project:first-of-type { border-top: 0; padding-top: 4px; }
+  .p-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+  .p-title { font-size: 21px; font-weight: 800; margin: 0; letter-spacing: -0.01em; }
+  .p-period { font-size: 13px; color: var(--ink-3); white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .p-sub { color: var(--ink-2); margin: 4px 0 12px; }
+  .meta { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+  .badge { font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 6px; background: var(--bg); color: var(--ink-2); border: 1px solid var(--line); }
+  .badge.lead { background: var(--accent); color: #fff; border-color: transparent; }
+  .badge.wip { background: var(--warn-soft); color: var(--warn-ink); border-color: transparent; }
+  .flow { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: 13px; margin: 0 0 14px; padding: 10px 12px; background: var(--bg); border-radius: 8px; }
+  .flow span { padding: 2px 8px; background: var(--paper); border: 1px solid var(--line); border-radius: 6px; font-weight: 600; color: var(--ink); }
+  .flow i { font-style: normal; color: var(--ink-3); }
+  .label { font-size: 13px; font-weight: 700; color: var(--ink); margin: 14px 0 6px; }
+  .trouble { margin-top: 12px; padding: 12px 14px; border-left: 3px solid var(--accent); background: var(--accent-soft); border-radius: 0 8px 8px 0; font-size: 14px; }
+  .trouble b { color: var(--accent); }
+  .links { margin-top: 12px; font-size: 14px; display: flex; gap: 16px; flex-wrap: wrap; }
+  .stack { font-size: 13px; color: var(--ink-3); margin-top: 10px; }
+
+  .edu { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .edu strong { font-size: 16px; }
+
+  footer { text-align: center; color: var(--ink-3); font-size: 12px; margin: 0 0 40px; }
+
+  @media (max-width: 720px) {
+    .page { margin: 0; padding: 32px 16px; border: 0; border-radius: 0; }
+    h1 { font-size: 32px; }
+    .skills { grid-template-columns: 1fr; gap: 4px; }
+    .skills dd { margin-bottom: 10px; }
+  }
+  @media print {
+    :root { --bg: #f4f5f7; --paper: #fff; --ink: #000; --ink-2: #333; --ink-3: #666; --line: #ddd; --accent: #1f5eff; --accent-soft: #eef3ff; }
+    body { background: #fff; font-size: 12.5px; }
+    .page { margin: 0; padding: 0; border: 0; max-width: none; }
+    .project { break-inside: avoid; }
+    footer { display: none; }
+    a { color: var(--ink); }
+  }
+</style>
+</head>
+<body>
+<!--
+  ✏️ 수정할 곳(TODO)은 [대괄호]로 표시해 두었습니다.
+  - [GitHub 아이디], [이메일], [학과], [졸업(예정) 연월]
+  - 각 프로젝트의 저장소 링크 (저장소를 만든 뒤 주소 교체)
+  ⚠️ 공개 페이지이므로 전화번호·학번은 넣지 않는 것을 권장합니다.
+-->
+<main class="page">
+
+  <header>
+    <p class="role">Backend Developer</p>
+    <h1>황승구</h1>
+    <p class="tagline">실시간으로 들어오는 데이터를 <strong>안전하게 검증하고 처리하는</strong> 백엔드를 만듭니다.</p>
+    <ul class="contact">
+      <li><b>GitHub</b><a href="https://github.com/[GitHub 아이디]">github.com/[GitHub 아이디]</a></li>
+      <li><b>Email</b><a href="mailto:[이메일]">[이메일]</a></li>
+      <li><b>Education</b>창신대학교 [학과]</li>
+    </ul>
+  </header>
+
+  <section>
+    <h2>About</h2>
+    <ul class="points">
+      <li>금융 거래·센서 데이터·실시간 영상까지, <strong>들어오는 데이터를 받아 판단하고 저장하는 시스템</strong>을 꾸준히 만들어 왔습니다.</li>
+      <li>상태 전이가 많은 송금 로직에서 <strong>"부작용(잔액 변동)은 가장 마지막에"</strong> 두는 설계로 잔액 불일치 버그를 해결한 경험이 있습니다.</li>
+      <li>6인 캡스톤을 포함해 <strong>팀장을 3회</strong> 맡으며 브랜치 규칙·개발 환경 통일 등 협업 기반을 먼저 세우는 역할을 해 왔습니다.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <dl class="skills">
+      <dt>Backend</dt>
+      <dd><span class="chip main">Python</span><span class="chip main">FastAPI</span><span class="chip">SQLAlchemy 2.0</span><span class="chip">Pydantic</span><span class="chip">JWT</span><span class="chip">WebSocket</span><span class="chip">asyncio</span></dd>
+      <dt>Database</dt>
+      <dd><span class="chip main">MySQL (TiDB)</span><span class="chip">MongoDB</span><span class="chip">InfluxDB</span></dd>
+      <dt>Frontend · App</dt>
+      <dd><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">Zustand</span><span class="chip">Flutter</span></dd>
+      <dt>AI · Vision</dt>
+      <dd><span class="chip">YOLOv8</span><span class="chip">OpenCV</span><span class="chip">OCR</span></dd>
+      <dt>IoT · Infra</dt>
+      <dd><span class="chip">ESP32</span><span class="chip">MQTT</span><span class="chip">Node-RED</span><span class="chip">AWS EC2</span></dd>
+      <dt>Collaboration</dt>
+      <dd><span class="chip">Git</span><span class="chip">GitHub</span></dd>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+
+    <!-- FinShield -->
+    <article class="project">
+      <div class="p-head">
+        <h3 class="p-title">FinShield</h3>
+        <span class="p-period">2026.03 – 진행 중</span>
+      </div>
+      <p class="p-sub">금융 취약계층을 위한 AI 기반 금융사기 <strong>사전</strong> 예방 서비스 (캡스톤 디자인)</p>
+      <div class="meta">
+        <span class="badge lead">팀장</span><span class="badge">6인</span><span class="badge">백엔드 · 프론트엔드 구조</span><span class="badge wip">진행 중</span>
+      </div>
+      <div class="flow">
+        <span>송금 요청</span><i>→</i><span>냉각기</span><i>→</i><span>보류 거래 검사</span><i>→</i><span>블랙리스트</span><i>→</i><span>AI 위험 판정</span><i>→</i><span>통과 시에만 잔액 COMMIT</span>
+      </div>
+      <p class="label">담당 및 구현</p>
+      <ul class="points">
+        <li>계좌·거래·관리자 도메인 REST API 설계·구현 (FastAPI, SQLAlchemy, TiDB / MongoDB)</li>
+        <li>송금 전 AI 분석 결과(allow / warn / flag / block)에 따라 분기하는 <strong>다단계 검증 파이프라인</strong> 구현 — block 판정 시 거래 레코드를 만들지 않아 잔액 변동 0 보장</li>
+        <li>관리자 신고 처리·블랙리스트 관리 구현, AI가 판단을 보류(escalated)한 신고만 관리자가 최종 판단하는 구조 설계</li>
+        <li>React 프론트엔드 골격 설계 — 역할 기반 단일 레이아웃, axios 인터셉터로 JWT 자동 첨부·401 자동 로그아웃, Zustand persist로 인증 상태 유지</li>
+        <li>팀장으로서 브랜치 네이밍 규칙 수립, Python 버전·requirements.txt 통일로 6인 개발 환경 표준화</li>
+      </ul>
+      <div class="trouble">
+        <b>Troubleshooting</b> — 잔액 차감 후 AI가 보류(FLAGGED) 판정하면 차감액이 복구되지 않는 버그 발생.
+        단계별 상태 로그로 차감이 판정보다 먼저 일어남을 특정하고, 차단·보류 판정이 모두 끝난 뒤에만 잔액을 COMMIT하도록 순서를 재배치해 해결.
+      </div>
+      <p class="stack">Python · FastAPI · SQLAlchemy · TiDB · MongoDB · React · TypeScript · Zustand · AWS EC2</p>
+      <div class="links"><a href="https://github.com/[GitHub 아이디]/[FinShield 저장소]">GitHub 저장소 →</a></div>
+    </article>
+
+    <!-- 안전제일 -->
+    <article class="project">
+      <div class="p-head">
+        <h3 class="p-title">안전제일</h3>
+        <span class="p-period">2025.09 – 2025.12</span>
+      </div>
+      <p class="p-sub">전동킥보드 헬멧 미착용·2인 탑승을 실시간 감지하고 관리자에게 경고하는 비전 시스템</p>
+      <div class="meta">
+        <span class="badge lead">팀장</span><span class="badge">2인</span><span class="badge">코드 작성 · 발표</span>
+      </div>
+      <div class="flow">
+        <span>웹캠</span><i>→</i><span>YOLOv8 사람 감지</span><i>+</i><span>커스텀 헬멧 모델</span><i>→</i><span>위반 판정 · 클립 저장</span><i>→</i><span>WebSocket</span><i>→</i><span>관리자 웹</span>
+      </div>
+      <p class="label">구현</p>
+      <ul class="points">
+        <li>YOLOv8n(사람)과 직접 학습한 헬멧 모델(best.pt)을 매 프레임 추론해 <strong>헬멧 미착용·2인 이상 탑승</strong> 실시간 감지</li>
+        <li>카메라 처리 스레드와 <strong>asyncio WebSocket 서버를 분리</strong>하고 Lock으로 공유 상태를 보호, 관리자 웹에 바이너리 JPEG로 실시간 스트리밍</li>
+        <li>WebSocket JSON 명령(start / stop)으로 사용자별 세션 녹화를 제어하고, 위반 횟수를 세션 단위로 집계</li>
+        <li><strong>3초 링버퍼(deque)</strong>로 위반 직전 장면이 포함된 경고 클립을 자동 저장, 2초 쿨다운으로 중복 경고 방지</li>
+      </ul>
+      <div class="trouble">
+        <b>설계 변경</b> — 제안 단계의 젯슨 나노 + LCD 구성을 PC 추론 서버 + 웹 대시보드로 전환해,
+        관리자가 원격에서 영상과 위반 기록을 함께 확인할 수 있는 구조로 확장.
+      </div>
+      <p class="stack">Python · Ultralytics YOLOv8 · OpenCV · websockets · asyncio · threading · HTML/JS</p>
+      <div class="links"><a href="https://github.com/[GitHub 아이디]/[안전제일 저장소]">GitHub 저장소 →</a></div>
+    </article>
+
+    <!-- 무텐더 -->
+    <article class="project">
+      <div class="p-head">
+        <h3 class="p-title">무텐더</h3>
+        <span class="p-period">2026.03 – 2026.06</span>
+      </div>
+      <p class="p-sub">OCR로 주문서를 읽고 로봇팔(Dobot Magician Lite)이 음료를 테이블로 옮기는 무인 바텐더</p>
+      <div class="meta">
+        <span class="badge lead">팀장</span><span class="badge">2인</span>
+      </div>
+      <div class="flow">
+        <span>주문서 촬영(3초 주기)</span><i>→</i><span>OCR 텍스트 파싱</span><i>→</i><span>음료·테이블 키워드 판별</span><i>→</i><span>석션 픽업</span><i>→</i><span>테이블 배치</span>
+      </div>
+      <ul class="points">
+        <li>OCR 결과에서 음료(COLA · WATER · CIDER · FANTA)와 테이블 위치 키워드를 판별하는 조건 분기 구현</li>
+        <li>음료 픽업 존·테이블 목적지 좌표를 함수화해 인식 결과에 따라 로봇팔 이동·석션 제어</li>
+        <li>목표 달성도: 주문 인식 100% · 테이블 배치 100% · 비전 기반 동적 픽업 50%</li>
+      </ul>
+      <div class="trouble">
+        <b>제약 대응</b> — 티칭 환경에서 외부 Python(Tesseract) 연동이 제한되고 비전 기반 이동의 성공률이 불안정해,
+        내장 OCR과 정밀 좌표 제어를 조합하는 방식으로 전환해 전체 자동화 흐름을 완성.
+      </div>
+      <p class="stack">Dobot Magician Lite · DobotLab · OCR</p>
+      <div class="links"><a href="https://github.com/[GitHub 아이디]/[무텐더 저장소]">시연 영상 · 저장소 →</a></div>
+    </article>
+
+    <!-- 산불가드 -->
+    <article class="project">
+      <div class="p-head">
+        <h3 class="p-title">산불가드</h3>
+        <span class="p-period">2025.03 – 2025.06</span>
+      </div>
+      <p class="p-sub">온도·습도·기압을 실시간 수집해 앱으로 시각화하는 산불 예방 IoT 시스템</p>
+      <div class="meta">
+        <span class="badge">3인</span><span class="badge">코드 리뷰 · 보고서 · 발표</span>
+      </div>
+      <div class="flow">
+        <span>ESP32 + BME280</span><i>→</i><span>MQTT</span><i>→</i><span>Node-RED</span><i>→</i><span>InfluxDB</span><i>→</i><span>Flutter 차트</span>
+      </div>
+      <ul class="points">
+        <li>센서값을 2초 주기로 MQTT 발행 → Node-RED에서 InfluxDB 시계열 저장 → Flutter(fl_chart)에서 그래프 표시하는 파이프라인</li>
+        <li>앱은 30초마다 마지막 시점 이후 데이터만 증분 조회하고 최근 1,000개 포인트만 유지해 갱신 비용 절감</li>
+        <li>코드 리뷰 과정에서 발행 전용 장치에 불필요한 MQTT 콜백을 찾아 제거</li>
+      </ul>
+      <p class="stack">ESP32 · Arduino · MQTT(Mosquitto) · Node-RED · InfluxDB · Flutter</p>
+      <div class="links"><a href="https://github.com/[GitHub 아이디]/[산불가드 저장소]">GitHub 저장소 →</a></div>
+    </article>
+
+    <!-- 포켓몬 -->
+    <article class="project">
+      <div class="p-head">
+        <h3 class="p-title">포켓몬 배틀 도우미</h3>
+        <span class="p-period">2025.03 – 2025.06</span>
+      </div>
+      <p class="p-sub">공격자·방어자 능력치를 입력하면 데미지를 계산해 주는 모바일 앱 (모바일프로그래밍)</p>
+      <div class="meta">
+        <span class="badge">개인 프로젝트</span>
+      </div>
+      <ul class="points">
+        <li>종족값·노력치·개체값·성격·랭크 보정(-6 ~ +6)을 반영한 능력치·데미지 계산 로직 구현</li>
+        <li>JSON 에셋에서 기술 데이터를 불러오는 로더와 기술 선택 위젯을 만들어, 기술을 고르면 위력·타입이 자동 입력되도록 구성</li>
+      </ul>
+      <p class="stack">Flutter · Dart</p>
+      <div class="links"><a href="https://github.com/[GitHub 아이디]/[포켓몬 저장소]">GitHub 저장소 →</a></div>
+    </article>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="edu">
+      <div><strong>창신대학교</strong> · [학과]</div>
+      <span class="p-period">[입학 연월] – [졸업(예정) 연월]</span>
+    </div>
+  </section>
+
+</main>
+<footer>Last updated 2026.10</footer>
+</body>
+</html>
